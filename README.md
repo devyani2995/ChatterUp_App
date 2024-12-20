@@ -31,21 +31,21 @@ ChatterUp is an interactive real-time chat application designed to facilitate se
 
 ## How It Works
 
-1. User Authentication
+1. **User Authentication**
 
    - When the user opens the app, they are prompted to enter their name.
    - The name is sent to the server and added to the list of online users.
 
-2. Real-time Communication
+2. **Real-time Communication**
 
    - Users can send messages via the message input field.
    - Messages are emitted to the server and broadcast to all connected clients.
 
-3. Chat History
+3. **Chat History**
 
    - On connecting, the server fetches old messages from the MongoDB database and sends them to the client.
 
-4. Online Users
+4. **Online Users**
 
    - The server tracks online users and broadcasts the list to all clients whenever there is a change.
 
