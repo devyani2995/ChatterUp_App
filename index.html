@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the application -->
+    <title>ChatterUp APP</title>
+    <!-- Linking the external CSS file for styling -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main heading of the application -->
+    <h1 class="chatterup-heading">ChatterUp</h1>
+    <!-- Section to display a form for user entry into the app -->
+    <div id="promt">
+      <form id="my-prompt">
+        <div class="form-group">
+          <!-- Input field for the user to enter their name -->
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter Name...."
+            required
+          />
+        </div>
+        <!-- Submit button for the form -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Container for chat messages and user information -->
+    <div id="container" class="container">
+      <!-- Left container for messages and chat form -->
+      <div class="left-container">
+        <!-- Welcome message for the user -->
+        <p id="welcome" style="text-align: left"></p>
+
+        <!-- Section where the list of chat messages will be displayed -->
+        <div id="message-list">
+          <!-- Chat messages dynamically rendered here -->
+        </div>
+
+        <!-- Form to add new chat messages -->
+        <div id="message-form-div">
+          <form id="message-form">
+            <div id="new-message" style="width: 100%">
+              <!-- Input field for the user to type a new message -->
+              <input
+                type="text"
+                id="text-message"
+                placeholder="Enter your message..."
+                required
+              />
+              <!-- Button to submit the new message -->
+              <button id="send-message-button" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right container to display the list of online users -->
+      <div class="right-container">
+        <h2 id="count">Online</h2>
+        <!-- Header for the online users section -->
+        <div id="online-user">
+          <!-- Online users will be dynamically displayed here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Including the Socket.IO library for real-time communication from the server -->
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <!-- Including the external JavaScript file for the app's functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
